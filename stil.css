@@ -1,0 +1,28 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body{
+    box-sizing: border-box;
+    
+}
+.container{
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.film-list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.film-img{
+    width: 250px;
+    height: 350px;
+}
+.film-title{
+    width: 250px;
+
+}

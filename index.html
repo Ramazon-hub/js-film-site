@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="stil.css"> -->
+</head>
+<body>
+    <div class="modal">
+        <div class="modal__content">
+            <button class="modal-close">&#x274C</button>
+            <h2 class="modal-title" ></h2>
+            <p class="modal-information"></p>
+        </div>
+    </div>
+    <div class="slider">
+        
+    </div>
+    <img src="./imgs/film green.png" width="250px" alt="">
+    <form class="filter-form">
+        <select class="select-genre">
+            <option value="all">Select diffirent genres !</option>
+        </select>
+        <input type="text" name="" class="search-input" id="">
+        <select class="select-sort">
+            <option value="Az">sort (Aa-Zz)</option>
+            <option value="Za">sort (Zz-Az)</option>
+            <option value="age">sort age</option>
+
+        </select>
+        <button type="submit">filter</button>
+    </form>
+    <div class="container">        
+        <ul class="film-list"></ul>
+    </div>
+    <script src="films.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="filmarray.js"></script>
+</body>
+</html>
