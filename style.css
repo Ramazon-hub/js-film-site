@@ -128,3 +128,128 @@ transition: box-shadow 0.6s;
     font-weight: 700;
 
 }
+@media only screen and (max-width:900px){
+    .container{
+        max-width:600px
+
+    }
+    .filter-form{
+        width: 500px;
+    }
+    .form-el{
+        width: 120px;
+        font-size:14px;
+        margin-bottom: 10px;
+
+    }
+}
+@media only screen and (max-width:700px){
+    .container{
+        max-width:500px
+
+    }
+    
+    .film-list{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+    .film-list__item{
+    background-color: #000;
+    margin-top: 20px;
+    transition: transform .6s;
+    text-align: center;
+    border-radius: 10px;
+    }
+    
+    
+    .film-list__img{
+    width: 200px;
+    }
+    
+    .film-list__title{
+     width:100%;
+    }
+    
+}
+@media only screen and (max-width:540px){
+    .logo-img{
+        width: 150px;
+        height: 150px;
+    }
+    .filter-form{
+        width: 300px;
+        text-align: center;
+    }
+    .form-el{
+        width: 100%;
+    }
+    .film-list{
+        margin-top: 20px;
+    }
+    .film-list__img{
+        width: 180px;
+        }
+        
+        .film-list__title{
+         width:180px;
+         font-size:14px
+        }
+        .more-info-btn{
+            font-size:12px;
+            padding: 3px 5px;
+        }
+}
+@media only screen and (max-width:480px){
+    .filter-form{
+        width: 200px;
+        text-align: center;
+    }
+    .form-el{
+        width: 100%;
+    }
+    .filter-btn{
+        font-size:14px
+    }
+    .film-list__img{
+        width: 150px;
+        }
+        
+        .film-list__title{
+         width:150px;
+         font-size:14px
+        }
+}
+@media only screen and (max-width:420px){
+    .film-list__img{
+        width: 120px;
+        }
+        
+        .film-list__title{
+            margin-top: 5px;
+         width:150px;
+         font-size:14px
+        }
+        .more-info-btn{
+            margin-top: 5px;
+        }
+}
+@media only screen and (max-width:400px){
+    .film-list{
+        justify-content: center;
+    }
+    .film-list__img{
+        width: 180px;
+        }
+        
+        .film-list__title{
+            margin-top: 5px;
+         width:180px;
+         font-size:15px
+        }
+        .more-info-btn{
+            margin-top: 5px;
+        }
+}
