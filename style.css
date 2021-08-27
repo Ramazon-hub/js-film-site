@@ -241,12 +241,12 @@ transition: box-shadow 0.6s;
         justify-content: center;
     }
     .film-list__img{
-        width: 180px;
+        width: 200px;
         }
         
         .film-list__title{
             margin-top: 5px;
-         width:180px;
+         width:200px;
          font-size:15px
         }
         .more-info-btn{
