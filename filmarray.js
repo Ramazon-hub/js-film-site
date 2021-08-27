@@ -11,7 +11,6 @@ var append =(otasi,bolasi) =>{
 let klas =(element,className) =>{
     element.className = className;
 }
-console.log(films.forEach(film=>console.log(film.poster)));
 var filmList = changeEl('.film-list');
 let filterForm = changeEl('.filter-form');
 let selectGenre = changeEl('.select-genre');
@@ -21,6 +20,8 @@ var modal = changeEl('.modal')
 var modalClose = changeEl('.modal-close')
 let modalTitle = changeEl('.modal-title')
 let modalInformation = changeEl('.modal-information')
+let modalContent = changeEl('.modal__content')
+
 
 var createFilm = (obj) =>{
         var newLi = createEl('li');
@@ -35,29 +36,15 @@ var createFilm = (obj) =>{
         filmTitle.textContent = obj.title;
         let filmGenresUl = createEl('ul');
         klas(filmGenresUl,'film-list__genreul')
-        let filmDate = createEl('span')
-        klas(filmDate,'film-date')
-        filmDate.textContent = new Date(obj.release_date).getFullYear() ;
+       
         
-        obj.genres.forEach(genre=>{
-            let filGenresLi = createEl('li');
-            klas(filGenresLi,'film-list__genre')
-            filGenresLi.textContent = genre;
-            append(filmGenresUl,filGenresLi)
-         })
-
-         let moreInfoBtn = createEl('button');
-         moreInfoBtn.textContent = 'More';
-         moreInfoBtn.dataset.id = obj.id
-         
-         moreInfoBtn.addEventListener('click',(event)=>{
-             modal.classList.add('modal-open')
-
-            //  modalTitle.textContent = obj.title
-            //  modalInformation.textContent = obj.overview
-            //  console.log(obj.overview)
-            //  console.log(event.target.dataset.id,' roma')
-            //  console.log(obj)
+        let moreInfoBtn = createEl('button');
+        moreInfoBtn.textContent = 'More';
+        klas(moreInfoBtn,'more-info-btn')
+        moreInfoBtn.dataset.id = obj.id
+        
+        moreInfoBtn.addEventListener('click',(event)=>{
+            modal.classList.add('modal-open')
              findItem(event.target.dataset.id)
             
             })
@@ -68,7 +55,7 @@ var createFilm = (obj) =>{
             append(newLi,filmTitle)
             append(filmList,newLi)
             append(newLi,filmGenresUl)
-            append(newLi,filmDate)
+            // append(newLi,filmDate)
             append(newLi,moreInfoBtn)
             
 }
@@ -77,6 +64,15 @@ var createFilm = (obj) =>{
             if(film.id===id){
                 modalTitle.textContent = film.title
                modalInformation.textContent = film.overview
+               var genresUl = createEl('ul');
+               obj.genres.forEach(genre=>{
+                    var genreLi = createEl('li');
+                    klas(filGenresLi,'l')
+                    genreLi.textContent = genre;
+                    append(genresUl,genreLi);
+                    append(modalContent,genresUl)
+                
+             })
             }
         })
     }  

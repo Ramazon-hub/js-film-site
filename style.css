@@ -5,6 +5,7 @@
 }
 body{
     background-color:#000;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .container{
 /* margin-top: 100px; */
@@ -13,11 +14,34 @@ padding: 0 30px;
 margin-left: auto;
 margin-right: auto;
 }
+.filter-form{
+   width: 700px;
+   margin-left: auto;
+   margin-right: auto;
+}
+.form-el{
+    color:red;
+    padding: 10px;
+    background:transparent;
+    border-radius:10px;
+    outline: none;
+    margin-right: 15px;
+    font-weight: 500;
+    font-size: 16px;
+
+}
+.filter-btn{
+    padding:5px  10px;
+    background-color: gold;
+    border-radius:10px;
+    font-size:16px
+}
 .film-list{
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 .film-list__item{
 background-color: #000;
@@ -41,8 +65,9 @@ transition: box-shadow 0.6s;
 }
 
 .film-list__title{
+    margin-top: 10px;
  width: 230px;
- font-size: 15px; 
+ font-size: 18px; 
  padding: 0 15px;
  color: #fff;
 }
@@ -64,21 +89,42 @@ transition: box-shadow 0.6s;
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);    
+    background-color: rgba(0, 0, 0, .6);    
     position: fixed;
     z-index: 10;
 }
 .modal__content{
     background-color: #fff;
-    position: relative;
     max-width: 500px;
-    padding: 20px;
+    padding: 30px;
+    border-radius:20px;
+    position: relative;
 }
 .modal-open{
     display: flex;
 }
 .modal-close{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 13px;
+    background: transparent;
+    border:none
+}
+.modal-title{
+    margin-top: 10px;
+}
+.modal-information{
+    margin-top: 20px;
+
+
+}
+.more-info-btn{
+    margin-top: 10px;
+    border:none;
+    padding: 5px 8px;
+    border-radius:5px;
+    color:blueviolet;
+    font-size:14px;
+    font-weight: 700;
+
 }
